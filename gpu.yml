@@ -11,7 +11,7 @@ jobs:
 #         - lspci
 #         - echo "It is done"
     - stage: "GPU - with no addons"
-      name: "with no addons"
+      name: "with no addons for gpu-medium"
       dist: focal
       vm:
         size: 'gpu-medium'
@@ -39,7 +39,7 @@ jobs:
 #       script:
 #         - echo "No Build"
     - stage: "Instal addons on linux"
-      name: "addons on focal distribution"
+      name: "addons on focal distribution with gpu-xlarge"
       dist: 'focal'
       addons:
         tensorflow: 1.6.0
@@ -52,7 +52,7 @@ jobs:
         - blender -v
         - echo "it is done"
     - stage: "Instal addons on linux"
-      name: "addons on focal distribution"
+      name: "addons on focal distribution with gpu-medium"
       dist: 'focal'
       addons:
         tensorflow: 1.6.0
